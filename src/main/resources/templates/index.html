@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+
+        <div th:each="user : ${users}">
+            <strong>Name:</strong>
+            <p th:text="${user.name}"></p>
+            <strong>Role:</strong>
+            <p th:text="${user.role.name}"></p>
+            <strong>Hobbies:</strong>
+            <div th:each="hobby : ${user.hobbies}">
+                <span th:text="${hobby.name}"></span>
+            </div>
+            <hr/>
+            <br/>
+            <br/>
+        </div>
+    </body>
+</html>
